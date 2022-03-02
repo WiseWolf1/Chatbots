@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #f2f2f2;
+  
+}
+nav{
+  background: #1b1b1b;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: #1b1b1b;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: cyan;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+.content{
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+
+
+.img{
+  background: url('im1.png')no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button:first-child{
+  color: #fff;
+  background: none;
+}
+.btns button:first-child:hover{
+  background: white;
+  color: black;
+}
+.center .btns button:last-child{
+  background: white;
+  color: black;
+}
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+  color: #fff;
+  background: #1cc7d0;
+  place-items: center;
+}
+.wrapper{
+  height: 400px;
+  width: 320px;
+  position: center;
+  transform-style: preserve-3d;
+	perspective: 1000px;
+  place-items: center;
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #020001, #000000);
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 30px;
+  font-weight: 500;
+}
+.back-face ul{
+  display: flex;
+}
+.back-face ul a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #000000, #000503);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
+  color: #1cc7d0;
+  border-color: #1cc7d0;
+  background: linear-gradient(375deg, transparent, transparent);
+}
